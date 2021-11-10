@@ -1,0 +1,55 @@
+Υφάσματα(Fabric): Βαμβακερά([C]otton) - 12, Μάλλινα([W]ool) - 14, Λινά([L]inen) - 18, Μεταξωτά([S]ilk) - 22
+Ετικέτες(Tag): Μικρές(S) - 0.05, Μεσαίες(M) - 0.07, Μεγάλες(L) - 0.09
+
+Προϊόντα: 
+Καπαρτίνα
+S:  W-2.5 + L-3.5 + Labour: 8.5 + TM
+M:  W-3.0 + L-3.0 + Labour: 8.5 + TM
+L:  W-3.5 + L-3.5 + Labour: 8.5 + TM
+XL: W-3.5 + L-4.5 + Labour: 8.5 + TM
+
+
+Παντελόνι Τζιν Γυναικείο
+XS: L-3.5 + Labour: 5.5 + TS
+S:  L-4.5 + Labour: 5.5 + TS
+M:  L-5.5 + Labour: 5.5 + TM
+L:  L-6.0 + Labour: 5.5 + TM
+XL: L-3.5 + Labour: 5.5 + TM
+
+
+Παντελόνι Τζιν Ανδρικό
+S:  C-4.5 + Labour: 5.5 + TM
+M:  C-5.0 + Labour: 5.5 + TM
+L:  C-5.5 + Labour: 5.5 + TM
+XL: C-6.0 + Labour: 5.5 + TM
+
+
+Μαγιό Γυναικείο
+S:  C-2.5 + Labour: 7.5 + TS
+M:  C-3.0 + Labour: 7.5 + TS
+L:  C-3.5 + Labour: 7.5 + TM
+XL: C-4.0 + Labour: 7.5 + TM
+
+
+Μαγιό Ανδρικό
+S:  C-4.5 + Labour: 7.5 + TS
+M:  C-5.0 + Labour: 7.5 + TM
+L:  C-5.5 + Labour: 7.5 + TM
+XL: C-6.0 + Labour: 7.5 + TL
+
+Πουκάμισο Γυναικείο
+XS: L-3.5 + Labour: 6.5 + TS
+S:  L-4.5 + Labour: 6.5 + TS
+M:  L-5.5 + Labour: 6.5 + TM
+L:  L-6.0 + Labour: 7.5 + TL
+XL: L-3.5 + Labour: 8.5 + TL
+
+
+Πουκάμισο Ανδρικό
+S:  L-5.5 + Labour: 6.0 + TS
+M:  L-6.5 + Labour: 6.5 + TM
+L:  L-7.0 + Labour: 7.5 + TL
+XL: L-7.5 + Labour: 8.0 + TL
+
+Χονδρική: Actual Cost + 17.5% of the Actual Cost
+Λιανική : Actual Cost + 22.5% of the Actual Cost
