@@ -1,4 +1,5 @@
-﻿using DataStructures.Models;
+﻿using ClothesFactory.Models;
+using DataStructures.Models;
 using DataStructures.Services;
 using System;
 using System.Collections.Generic;
@@ -12,31 +13,38 @@ namespace ClothesFactory
     {
         static void Main(string[] args)
         {
-            //Fabric fabric = new Fabric("Silk", 22, Unit.Meters, new FabricType("Silk"));
-            //Console.WriteLine(fabric);
-
-            //    FabricTypeService fabricTypeService = new FabricTypeService();
-
-            //    FabricType cotton22 = new FabricType("Cotton");
-            //    fabricTypeService.AddFabricType(cotton22); // add a new FabricType using a local variable
-            //    fabricTypeService.AddFabricType(new FabricType("Cotton")); // add a new FabricType without a local variable
-
-            //    fabricTypeService.FabricTypes.ForEach(Print);
+            bool useDesigner = true;
 
             /*
-             * 0. FabricTypes, create - FabricTypeService
-             * 1. Fabrics,     create - FabricService
-             * 2. Products,    create - ProductService
-             * 3. Products, available for sell
+             * 0. FabricTypes,  create - FabricTypeService
+             * 1. Fabrics,      create - FabricService
+             * 2. Tags,         create - TagService
+             * 3. Products,     create - ProductService
+             * 4. Products,     available for sell
              * 
              */
 
+            if(useDesigner)
+            {
+                Designer designer = new Designer(useDesigner);
+            }
+            else
+            {
+                // We don't need to do 0 line above since this is included to 1!!!!
+                // Item 0,1
+                FabricService fabricService = new FabricService();
+                fabricService.Fabrics.ForEach(Console.WriteLine);
 
+                // Item 2
+                TagService tagService = new TagService();
+                tagService.Tags.ForEach(Console.WriteLine);
+
+                // Item 3 Products
+                ProductService productService = new ProductService();
+
+                // Item 4 Products to Sell
+                // ??? What to do here?
+            }
         }
-
-        //static void Print(FabricType fabricType)
-        //{
-        //    Console.WriteLine(fabricType);
-        //}
     }
 }

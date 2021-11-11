@@ -59,7 +59,7 @@ namespace DataStructures.Models
 
         private Unit SizeValidation(Unit size, Unit defaultSize)
         {
-            Unit result = defaultSize;
+            Unit result;
             if (size == 0)
             {
                 result = defaultSize;
@@ -96,15 +96,13 @@ namespace DataStructures.Models
 
         public override string ToString()
         {
-            string result = "";
             StringBuilder sb = new StringBuilder();
             sb.Append("Fabric:");
             sb.Append($"Name-{Name}, ");
             sb.Append($"Type-{Type}, ");
             sb.Append($"Cost-{Cost} Euros, ");
             sb.Append($"Size-{Size}");
-            result = sb.ToString();
-            return result;
+            return sb.ToString();
         }
     }
 }

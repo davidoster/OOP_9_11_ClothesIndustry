@@ -22,6 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\FabricType.cs" />
+    <Compile Include="Models\IProduct.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Size.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\Unit.cs" />

@@ -10,19 +10,19 @@ namespace DataStructures.Models
     {
         public string Name { get; set; }
         public Size Size { get; set; }
+        public double Cost { get; set; }
 
-        public Tag(string name, Size size)
+        public Tag(string name, Size size, double cost)
         {
             Name = name;
             Size = size;
+            Cost = cost;
         }
 
         public override string ToString()
         {
-            string result = "";
             StringBuilder sb = new StringBuilder();
-            result = sb.Append("Tag: ").Append($"Name-{Name}, Size-{Size}").ToString();
-            return result;
+            return sb.Append("Tag: ").Append($"Name-{Name}, Size-{Size}, Cost-{Cost}").ToString();
         }
     }
 }

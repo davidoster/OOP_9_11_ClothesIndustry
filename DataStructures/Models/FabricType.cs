@@ -21,23 +21,21 @@ namespace DataStructures.Models
             }  
         }
 
-        public FabricType(string Name) // CoTTon --> COTTON
+        public FabricType(string name) // CoTTon --> COTTON
         {
-            this.Name = NameValidation(Name);
+            this.Name = NameValidation(name);
         }
 
         private string NameValidation(string name)
         {
-            string result = "";
-            result = name.ToUpper();
+            string result = name.ToUpper();
             return result;
 
         }
 
         public override bool Equals(object obj)
         {
-            bool result = false;
-            result = (((FabricType)obj)._name == _name) && (((FabricType)obj).Name == Name);
+            bool result = ((FabricType)obj)._name == _name && ((FabricType)obj).Name == Name;
             return result;
  
             /*
