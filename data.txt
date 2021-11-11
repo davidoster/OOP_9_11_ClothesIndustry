@@ -3,15 +3,15 @@
 
 Προϊόντα: 
 Καπαρτίνα
-S:  W-2.5 + L-3.5 + Labour: 8.5 + TM
-M:  W-3.0 + L-3.0 + Labour: 8.5 + TM
-L:  W-3.5 + L-3.5 + Labour: 8.5 + TM
+Coat-AAA	- S:  W-2.5 + L-3.5 + Labour: 8.5 + TM
+Coat-BBB	- M:  W-3.0 + L-3.0 + Labour: 8.5 + TM
+Coat-CCC	- L:  W-3.5 + L-3.5 + Labour: 8.5 + TM
 XL: W-3.5 + L-4.5 + Labour: 8.5 + TM
 
 
 Παντελόνι Τζιν Γυναικείο
-XS: L-3.5 + Labour: 5.5 + TS
-S:  L-4.5 + Labour: 5.5 + TS
+TROUSERS-JEAN-WOMEN-AAA		-	XS: L-3.5 + Labour: 5.5 + TS
+TROUSERS-JEAN-WOMEN-BBB		-	S:  L-4.5 + Labour: 5.5 + TS
 M:  L-5.5 + Labour: 5.5 + TM
 L:  L-6.0 + Labour: 5.5 + TM
 XL: L-3.5 + Labour: 5.5 + TM

@@ -51,6 +51,13 @@ namespace ClothesFactory.Models
         {
             productService = new ProductService();
             ProductSizes = productService.GenerateProductSizes(DateTime.Now);
+            // StartClothService <--- new ClothPrices()
+            List<FabricCosts> fabricCosts = new List<FabricCosts>()
+            {
+                { new FabricCosts(new FabricType("Wool"), 2.5) },
+                { new FabricCosts(new FabricType("Linen"), 3.5) }
+            };
+            ClothPrices coatSM = new ClothPrices(ClothTypes.COAT, fabricCosts, Size.SM);
         }
 
         // public Cloth GenerateCloth(Type, Size)
@@ -79,6 +86,8 @@ namespace ClothesFactory.Models
 
         private Cloth GenerateCoat(string type, Size size)
         {
+            // ProductType, Size, FabricType, Cost
+            // Size M, Wool,3.5
             Fabric wool = new Fabric("Wool", 2.5, Unit.Meters,
                 new FabricType("Wool"));
             Fabric linen = new Fabric("Linen", 3.5, Unit.Meters,

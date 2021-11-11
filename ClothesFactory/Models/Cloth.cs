@@ -18,6 +18,8 @@ namespace ClothesFactory.Models
             private set { _totalCost = value; }
         }
 
+        public ClothTypes Type { get; set; }
+
         public Cloth() { }
 
         public Cloth(string name, Size size, List<Fabric> fabrics, double labour, Tag tag)
