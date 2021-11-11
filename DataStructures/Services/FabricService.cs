@@ -43,16 +43,20 @@ namespace DataStructures.Services
         private void GenerateFabrics()
         {
             int index = FabricTypeService.FabricTypes.IndexOf(new FabricType("Cotton"));
-            AddFabric(new Fabric("Cotton Super Soft", 12, Unit.Meters, FabricTypeService.FabricTypes[index]));
+            AddFabric(new Fabric("Cotton Super Soft", 12, 
+                Unit.Meters, FabricTypeService.FabricTypes[index]));
             
             index = FabricTypeService.FabricTypes.IndexOf(new FabricType("Wool"));
-            AddFabric(new Fabric("Wool Not So Soft", 14, Unit.Meters, FabricTypeService.FabricTypes[index]));
+            AddFabric(new Fabric("Wool Not So Soft", 14, 
+                Unit.Meters, FabricTypeService.FabricTypes[index]));
 
             index = FabricTypeService.FabricTypes.IndexOf(new FabricType("Linen"));
-            AddFabric(new Fabric("Linen THE Soft Touch", 18, Unit.Meters, FabricTypeService.FabricTypes[index]));
+            AddFabric(new Fabric("Linen THE Soft Touch", 18, 
+                Unit.Meters, FabricTypeService.FabricTypes[index]));
 
             index = FabricTypeService.FabricTypes.IndexOf(new FabricType("Silk"));
-            AddFabric(new Fabric("Silk THE ETHERAL TOUCH", 22, Unit.Meters, FabricTypeService.FabricTypes[index]));
+            AddFabric(new Fabric("Silk THE ETHERAL TOUCH", 22, 
+                Unit.Meters, FabricTypeService.FabricTypes[index]));
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ClothesFactory.Models
 {
-    class Designer : IDesigner
+    public class Designer : IDesigner
     {
 
         public FabricService fabricService { get; set; }
@@ -38,36 +38,68 @@ namespace ClothesFactory.Models
         public void StartFabricService(bool print)
         {
             fabricService = new FabricService();
-            fabricService.Fabrics.ForEach(Console.WriteLine);
+            //fabricService.Fabrics.ForEach(Console.WriteLine);
         }
 
         public void StartTagService(bool print)
         {
             tagService = new TagService();
-            tagService.Tags.ForEach(Console.WriteLine);
+            //tagService.Tags.ForEach(Console.WriteLine);
         }
 
         public void StartProductService(bool print)
         {
             productService = new ProductService();
             ProductSizes = productService.GenerateProductSizes(DateTime.Now);
-
-            Fabric wool = new Fabric("Wool", 2.5, Unit.Meters, new FabricType("Wool"));
-            Fabric linen = new Fabric("Linen", 3.5, Unit.Meters, new FabricType("Linen"));
-
-            Console.WriteLine($"Fabric Wool: {fabricService.Fabrics.IndexOf(wool)}");
-
-            List<Fabric> fabrics = new List<Fabric>() { wool, linen };
-            Tag tag = new Tag("Small", Size.SM, 0.05);
-            Cloth coat = new Cloth( "Coat", 
-                                    ProductSizes[ProductSizes.IndexOf(Size.SM)], 
-                                    fabrics, // I believe this is wrong and we need to change it!!!! like the other services
-                                    8.5, 
-                                    tagService.Tags[tagService.Tags.IndexOf(tag)]);
-            Console.WriteLine(coat);
-            
         }
 
-        
+        // public Cloth GenerateCloth(Type, Size)
+        public Cloth GenerateCloth(string type, Size size)
+        {
+            Cloth cloth = new Cloth();
+            switch(type)
+            {
+                // DRY - DON'T REPEAT YOURSELF
+                case "Coat-AAA":
+                case "Coat-BBB":
+                case "Coat-CCC":
+                    // My 1st Product - Coat
+                    cloth = GenerateCoat(type, size);
+                    Console.WriteLine(cloth);
+
+                    break;
+                case "WomensJean-AAA":
+                case "WomensJean-BBB":
+                    // GenerateWomensJean(type, size);
+                    break;
+
+            }
+            return cloth;
+        }
+
+        private Cloth GenerateCoat(string type, Size size)
+        {
+            Fabric wool = new Fabric("Wool", 2.5, Unit.Meters,
+                new FabricType("Wool"));
+            Fabric linen = new Fabric("Linen", 3.5, Unit.Meters,
+                new FabricType("Linen"));
+
+            Fabric woolFromList = fabricService.Fabrics[fabricService.Fabrics.IndexOf(wool)];
+            wool.Cost *= woolFromList.Cost;
+
+            Fabric linenFromList = fabricService.Fabrics[fabricService.Fabrics.IndexOf(linen)];
+            linen.Cost *= linenFromList.Cost;
+
+            //Console.WriteLine($"Fabric Wool: {fabricService.Fabrics.IndexOf(wool)}");
+
+            List<Fabric> fabrics = new List<Fabric>() { wool, linen };
+            Tag tag = new Tag("Small", size, 0.05);
+            Cloth coat = new Cloth(type,
+                                    ProductSizes[ProductSizes.IndexOf(size)],
+                                    fabrics, // I believe this is wrong and we need to change it!!!! like the other services
+                                    8.5,
+                                    tagService.Tags[tagService.Tags.IndexOf(tag)]);
+            return coat;
+        }
     }
 }

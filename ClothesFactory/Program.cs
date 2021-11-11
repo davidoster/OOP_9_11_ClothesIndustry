@@ -24,6 +24,19 @@ namespace ClothesFactory
              * 
              */
 
+            Dictionary<string, Size> clothesFactoryCatalog = new Dictionary<string, Size>() 
+                            { { "Coat-AAA", Size.SM }, { "Coat-BBB", Size.M } };
+            clothesFactoryCatalog.Add("Coat-CCC", Size.L);
+
+
+            // Type, Size
+            // Type = Coat-22978A, Size = Size.SM
+            //GenerateCloth(Type, Size);
+
+
+
+
+
             if(useDesigner)
             {
                 Designer designer = new Designer(useDesigner);

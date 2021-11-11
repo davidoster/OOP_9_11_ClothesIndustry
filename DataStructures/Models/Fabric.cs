@@ -40,6 +40,9 @@ namespace DataStructures.Models
             }
         }
 
+        // Meters : 1 Meter Wool : 12 Euros <--- list of fabrics from Fabric Service
+        // new Fabric for a product: 1 Meter * 12 = 12
+
         public Fabric(string name, double cost, Unit size, FabricType type)
         {
             Name = name;
@@ -72,12 +75,11 @@ namespace DataStructures.Models
         public override bool Equals(object obj)
         {
             return obj is Fabric fabric &&
-                   Name == fabric.Name &&
+                   //Name == fabric.Name &&
                    EqualityComparer<FabricType>.Default.Equals(Type, fabric.Type) &&
-                   _size == fabric._size &&
-                   Size == fabric.Size &&
-                   _cost == fabric._cost &&
-                   Cost == fabric.Cost;
+                   _size == fabric._size;
+                   //_cost == fabric._cost &&
+                   //Cost == fabric.Cost;
         }
 
         public override int GetHashCode()
