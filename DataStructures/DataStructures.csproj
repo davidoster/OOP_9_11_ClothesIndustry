@@ -50,6 +50,7 @@
     <Compile Include="Models\Fabric.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FabricService.cs" />
     <Compile Include="Services\FabricTypeService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\TagService.cs" />

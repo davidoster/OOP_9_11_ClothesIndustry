@@ -14,9 +14,10 @@ namespace DataStructures.Services
         public FabricTypeService()
         {
             FabricTypes = new List<FabricType>();
+            GenerateFabricTypes();
         }
 
-        public int AddFabricType(FabricType type)
+        private int AddFabricType(FabricType type)
         {
             if(FabricTypes.Contains(type))
             {
@@ -27,6 +28,14 @@ namespace DataStructures.Services
                 FabricTypes.Add(type);
                 return 1;
             }
+        }
+
+        private void GenerateFabricTypes()
+        {
+            AddFabricType(new FabricType("Cotton"));
+            AddFabricType(new FabricType("Wool"));
+            AddFabricType(new FabricType("Linen"));
+            AddFabricType(new FabricType("Silk"));
         }
     }
 }

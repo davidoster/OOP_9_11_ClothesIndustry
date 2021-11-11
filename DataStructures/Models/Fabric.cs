@@ -27,16 +27,17 @@ namespace DataStructures.Models
         }
 
         private double _cost;
-        public double Cost { 
-            get 
+        public double Cost
+        {
+            get
             {
                 return _cost;
             }
-            
-            set 
+
+            set
             {
                 _cost = CostValidation(value, 10);
-            } 
+            }
         }
 
         public Fabric(string name, double cost, Unit size, FabricType type)
@@ -47,14 +48,13 @@ namespace DataStructures.Models
             Type = type;
         }
 
-        private double CostValidation(double cost, double defaultCost) 
+        private double CostValidation(double cost, double defaultCost)
         {
-            double result = defaultCost;
             if (cost <= 0)
             {
-                Cost = 10;
+                return defaultCost;
             }
-            return result;
+            return cost;
         }
 
         private Unit SizeValidation(Unit size, Unit defaultSize)
@@ -63,11 +63,35 @@ namespace DataStructures.Models
             if (size == 0)
             {
                 result = defaultSize;
-            } else
+            }
+            else
             {
                 result = size;
             }
             return result;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Fabric fabric &&
+                   Name == fabric.Name &&
+                   EqualityComparer<FabricType>.Default.Equals(Type, fabric.Type) &&
+                   _size == fabric._size &&
+                   Size == fabric.Size &&
+                   _cost == fabric._cost &&
+                   Cost == fabric.Cost;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -1670995019;
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
+            hashCode = hashCode * -1521134295 + EqualityComparer<FabricType>.Default.GetHashCode(Type);
+            hashCode = hashCode * -1521134295 + _size.GetHashCode();
+            hashCode = hashCode * -1521134295 + Size.GetHashCode();
+            hashCode = hashCode * -1521134295 + _cost.GetHashCode();
+            hashCode = hashCode * -1521134295 + Cost.GetHashCode();
+            return hashCode;
         }
 
         public override string ToString()
