@@ -22,10 +22,10 @@ namespace ClothesFactory.Models
         public override void GenerateProduct(string name, Size size, List<Fabric> fabrics, double labour, Tag tag)
         {
             Name = name;
-            Size = Size; // is this correct???
-            Fabrics = Fabrics; // is this correct???
+            Size = size; 
+            Fabrics = fabrics;
             Labour = labour;
-            Tag = tag; // is this correct???
+            Tag = tag;
 
         }
 
@@ -36,12 +36,16 @@ namespace ClothesFactory.Models
 
         public override string ToString()
         {
+            SizeNames sizeNames = new SizeNames();
+
             StringBuilder sb = new StringBuilder();
+            sb.Append(" Fabrics:");
             foreach (var item in Fabrics)
             {
-                sb.Append("Fabrics:").Append(item.Name).Append(" + ").Append(item.Cost);
+                sb.Append(" ").Append("uses ").Append(item.Name).Append(" ").Append(item.Cost).Append(" ").Append(item.Size);
             }
-            return $"Cloth: {Name}, {Size.ToString()}, {sb.ToString()}, {Labour}, {Tag.Name}";
+            string sizeName = sizeNames.Names.ElementAt((int)Size).Key;
+            return $"Cloth: Name-{Name}, Size-{sizeName},{sb.ToString()}, Labour-{Labour}, Tag-{Tag.Name}";
         }
     }
 }

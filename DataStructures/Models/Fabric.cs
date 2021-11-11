@@ -59,16 +59,14 @@ namespace DataStructures.Models
 
         private Unit SizeValidation(Unit size, Unit defaultSize)
         {
-            Unit result;
-            if (size == 0)
+            if (size <= 0)
             {
-                result = defaultSize;
+                return defaultSize;
             }
             else
             {
-                result = size;
+                return size;
             }
-            return result;
         }
 
         public override bool Equals(object obj)

@@ -33,11 +33,11 @@ namespace ClothesFactory
                 // We don't need to do 0 line above since this is included to 1!!!!
                 // Item 0,1
                 FabricService fabricService = new FabricService();
-                fabricService.Fabrics.ForEach(Console.WriteLine);
+                //fabricService.Fabrics.ForEach(Console.WriteLine);
 
                 // Item 2
                 TagService tagService = new TagService();
-                tagService.Tags.ForEach(Console.WriteLine);
+                //tagService.Tags.ForEach(Console.WriteLine);
 
                 // Item 3 Products
                 ProductService productService = new ProductService();
