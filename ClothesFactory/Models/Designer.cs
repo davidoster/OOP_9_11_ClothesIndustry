@@ -93,7 +93,9 @@ namespace ClothesFactory.Models
             //Console.WriteLine($"Fabric Wool: {fabricService.Fabrics.IndexOf(wool)}");
 
             List<Fabric> fabrics = new List<Fabric>() { wool, linen };
-            Tag tag = new Tag("Small", size, 0.05);
+            SizeNames sizeNames = new SizeNames();
+            string sizeName = sizeNames.Names.ElementAt((int)size).Key;
+            Tag tag = new Tag(sizeName, size, 0.05);
             Cloth coat = new Cloth(type,
                                     ProductSizes[ProductSizes.IndexOf(size)],
                                     fabrics, // I believe this is wrong and we need to change it!!!! like the other services

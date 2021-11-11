@@ -46,7 +46,7 @@ namespace DataStructures.Services
             {
                 result = new List<Tag>() {  new Tag("Small", sizes[sizes.IndexOf(Size.SM)], 0.05),
                                             new Tag("Medium", sizes[sizes.IndexOf(Size.M)], 0.07),
-                                            new Tag("Small", sizes[sizes.IndexOf(Size.L)], 0.09) 
+                                            new Tag("Large", sizes[sizes.IndexOf(Size.L)], 0.09) 
                 };
             }
 

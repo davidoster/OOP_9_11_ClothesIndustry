@@ -22,9 +22,9 @@ namespace DataStructures.Models
         public override bool Equals(object obj)
         {
             return obj is Tag tag &&
-                   Name == tag.Name &&
-                   Size == tag.Size &&
-                   Cost == tag.Cost;
+                   //Name == tag.Name &&
+                   Size == tag.Size;
+                   //Cost == tag.Cost;
         }
 
         public override int GetHashCode()

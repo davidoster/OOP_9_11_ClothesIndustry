@@ -17,8 +17,8 @@ namespace Shop
             //clothes.Add(new Cloth());
             Designer designer = new Designer();
             designer.GenerateCloth("Coat-AAA", Size.SM);
-            //designer.GenerateCloth("Coat-BBB", Size.M);
-            //designer.GenerateCloth("Coat-CCC", Size.L);
+            designer.GenerateCloth("Coat-BBB", Size.M);
+            designer.GenerateCloth("Coat-CCC", Size.L);
         }
     }
 }
